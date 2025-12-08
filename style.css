@@ -1,0 +1,41 @@
+:root {
+    --color-background: #ffffff; 
+
+    --color-primary-dark: #1f2734; /* Basé sur le fond de la section contact */
+
+    --color-accent-green: #23d160; 
+
+    --color-text-light: #f5f5f5; 
+    
+    --color-text-dark: #333333;
+
+    --font-primary: 'Montserrat', sans-serif; 
+    --font-size-base: 16px; 
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+.formation-list {
+    padding: 60px 0;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.formation-card {
+    background-color: var(--color-background);
+    border: 0px solid #e0e0e0; 
+    /* border-radius: 8px; */
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
