@@ -8,20 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     </head>
 <body>
     
     <header id="main-header">
         <nav class="container">
             <div class="logo">
-                <img src="/assets/logo.png" alt="Logo Klivio" width="100">
+                <img src="/assets/logo.png" alt="Logo Klivio">
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Formations</a></li>
-                <li><a href="#">Rechercher</a></li>
-                <li><a href="#">Connexion</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
+
+            <div class="nav-center">
+                <a href="#" class="nav-link-formations">Les formations</a>
+                
+                <form class="search-form">
+                    <input type="text" placeholder="Rechercher" aria-label="Rechercher une formation">
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <!-- <i class="fas fa-search"></i> -->
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+                    </button>
+                </form>
+            </div>          
+            <div class="nav-actions">
+                <a href="#" class="btn-connexion">Connexion</a>
+                <a href="#" class="btn-inscription">Inscription</a>
+            </div>
         </nav>
     </header>
 
@@ -29,6 +42,7 @@
         <div class="hero-content container">
             <h1>KLIVIO, L'ALLIÉ DE VOTRE PROGRESSION</h1>
             <h2>LES MEILLEURES FORMATIONS SUR LE DÉVELOPPEMENT PERSONNEL</h2>
+            <button>En savoir plus</button>
         </div>
     </section>
 
@@ -43,7 +57,13 @@
                         <p class="price">15,99 €</p>
                         <h4>Parler en public</h4>
                         <p class="instructor">Sonia Lefevra | Coach prise de parole</p>
-                        <div class="rating">*****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
                         <p class="description">Gagnez en aisance et captez votre public.</p>
                     </div>
                 </article>
@@ -54,7 +74,13 @@
                         <p class="price">15,99 €</p>
                         <h4>Gérer le stress</h4>
                         <p class="instructor">Licie Carrar | Formatrice</p>
-                        <div class="rating">****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
                         <p class="description">Apprenez à faire face au stress et à le gérer.</p>
                     </div>
                 </article>
@@ -65,7 +91,13 @@
                         <p class="price">15,99 €</p>
                         <h4>Travailler en équipe</h4>
                         <p class="instructor">Morsau | Expert</p>
-                        <div class="rating">*****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
                         <p class="description">Collaborez efficacement même à distance.</p>
                     </div>
                 </article>
@@ -76,12 +108,19 @@
                         <p class="price">15,99 €</p>
                         <h4>Gérer son temps</h4>
                         <p class="instructor">CER Dumar | Coach organisation</p>
-                        <div class="rating">****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
                         <p class="description">Optimisez vos journées et gagnez en efficacité.</p>
                     </div>
                 </article>
             </div>
-            <a href="#" class="btn-see-more">Voir plus de formations</a>
+            <!-- <a href="#" class="btn-see-more">Voir plus de formations</a> -->
+             <button class="btn-see-more">Voir plus de formations</button>
         </section>
 
         <section id="recent-formations" class="container formations-list">
@@ -94,7 +133,13 @@
                         <p class="price">15,99 €</p>
                         <h4>Mieux communiquer</h4>
                         <p class="instructor">Junen Marmet | Coach en comm</p>
-                        <div class="rating">*****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
                         <p class="description">Améliorez vos échanges et votre impact personnel.</p>
                     </div>
                 </article>
@@ -105,7 +150,13 @@
                         <p class="price">15,99 €</p>
                         <h4>Maîtriser ses émotions</h4>
                         <p class="instructor">Arnis Benall | Psy du travail</p>
-                        <div class="rating">*****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
                         <p class="description">Développez votre calme et intelligence émotionnelle.</p>
                     </div>
                 </article>
@@ -116,7 +167,13 @@
                         <p class="price">15,99 €</p>
                         <h4>Résoudre les problèmes</h4>
                         <p class="instructor">Thomas Rolem | Expert</p>
-                        <div class="rating">****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
                         <p class="description">Analysez, décidez et trouvez des solutions durables.</p>
                     </div>
                 </article>
@@ -127,12 +184,19 @@
                         <p class="price">15,99 €</p>
                         <h4>Leadership positif</h4>
                         <p class="instructor">Marc Nguyen | Consultant</p>
-                        <div class="rating">*****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
                         <p class="description">Inspirez, motivez et fédérez votre équipe.</p>
                     </div>
                 </article>
             </div>
             <a href="#" class="btn-see-more">Voir plus de formations</a>
+             <!-- <button class="btn-see-more">Voir plus de formations</button> -->
         </section>
 
         <section id="testimonials-section" class="full-width">
@@ -143,14 +207,26 @@
                     <div class="testimonial-card">
                         <img src="/assets/juliette.png" alt="Photo de Juliette" class="avatar">
                         <h4>Juliette</h4>
-                        <div class="rating">*****</div> 
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div> 
                         <p>J'ai trouvé le parcours structuré, des cours pertinents et pratiques.</p>
                     </div>
 
                     <div class="testimonial-card">
                         <img src="/assets/camille.png" alt="Photo de Camille" class="avatar">
                         <h4>Camille</h4>
-                        <div class="rating">*****</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
                         <p>Le contenu est pratique qui m'a permis d'appliquer immédiatement les notions, et la progression est parfaite pour se former en autonomie.</p>
                     </div>
 
