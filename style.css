@@ -454,33 +454,168 @@ body {
     transform: translateY(-1px);
 }
 
+#testimonials-section {
+    padding: 3.75rem 0;
+    background: var(--white-color);
+}
+
+#testimonials-section h2 {
+    color: var(--header-bg);
+    text-align: center;
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+    margin-bottom: 5rem;
+    font-weight: 800;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 7.5rem;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    /* text-align: left; */
+    /* margin-left: 2.5rem; */
+    margin: 0 3rem;
+    /* margin-right: 15rem; */
+}
+
+.testimonial-card .avatar {
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rating i {
+    color: var(--star-color-full);
+    margin-right: 3px;
+    font-size: 14px;
+}
+
+.testimonial-card p {
+    /* margin-top: 10px;
+    line-height: 1.45;
+    color: var(--text-color);
+    font-size: 14px; */
+
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+    letter-spacing: -0.015rem;
+}
+
 
 
 /* Média Query pour l'adaptation du header sur les petits écrans */
-@media (max-width: 75rem) {
-    .search-form {
-        width: 18.75rem;
-    }
-}
-
-@media (max-width: 56.25rem) {
+@media (max-width: 600px) {
     #main-header .container {
+        /* On passe en grille sur 2 colonnes (Logo à gauche, Actions à droite) */
         display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: 0.625rem;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        align-items: center;
     }
-
+    
+    /* Le lien "Les formations" (nav-center) disparaît (souvent dans un menu burger) */
     .nav-center {
         display: none;
     }
 
+    /* L'icône de connexion (nav-actions) passe à droite */
     .nav-actions {
         justify-content: flex-end;
     }
 
+    /* La barre de recherche (search-form) prend toute la largeur sous le header */
     .search-form {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1; /* Prend la largeur de la première colonne à la dernière */
         width: 100%;
-        margin-top: 0.3125rem;
+        margin-top: 5px;
+    }
+    
+    /* Réduction de la taille de l'icône de recherche pour un meilleur ajustement */
+    .search-icon {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Règle générale pour aérer les contenus */
+    .container {
+        padding: 0 15px; /* Réduit le padding latéral du conteneur sur mobile */
+    }
+
+    /* Réduction générale des marges et padding de sections */
+    .formations-list {
+        padding: 40px 15px;
+    }
+    
+    /* Titres de section (H2 ou H3) */
+    .formations-list h2, .formations-list h3 {
+        font-size: 1.5rem; /* Réduction du gros titre */
+        line-height: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Le titre principal H1 */
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    /* Le paragraphe sous le H1 */
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    /* La Grille magique passe à 1 seule colonne */
+    .cards-container {
+        grid-template-columns: 1fr; /* Une seule carte par ligne */
+        gap: 20px;
+    }
+    
+    /* On ajuste la hauteur de l'image de la carte */
+    .formation-card .course-image {
+        height: 10rem; /* 160px */
+    }
+    
+    /* Ajustement de la taille du titre de la carte */
+    .formation-card h3 { 
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.8rem;
+    }
+    
+    /* Ajustement du prix pour qu'il ne soit pas trop gros */
+    .formation-card .price {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    /* Le bouton Voir plus prend une largeur raisonnable */
+    .btn-see-more {
+        width: 80%; 
+        font-size: 0.9rem;
     }
 }
