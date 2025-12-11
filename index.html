@@ -409,18 +409,21 @@
             </div>
         </section>
 
-        <section id="main-footer" class="full-width">
-            <div class="container footer-content">
+        <section id="contact-section" class="full-width">
+            <div class="container contact-container">
+                <h3>NOUS CONTACTER</h3>
                 
-                <div id="contact-section" class="contact-form">
-                    <h3>NOUS CONTACTER</h3>
-                    <form>
-                        <input type="text" name="nom" placeholder="Nom">
-                        <input type="email" name="email" placeholder="Email">
-                        <textarea name="message" placeholder="Votre message"></textarea>
-                        <button type="submit" class="btn-submit">Envoyer</button>
-                    </form>
-                </div>
+                <form class="contact-form">
+                    <div class="input-row">
+                        <input type="text" name="nom" placeholder="Nom" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                    
+                    <button type="submit" class="btn-submit">Envoyer</button>
+                </form>
+            </div>
         </section>
     </main>
     
