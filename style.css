@@ -596,6 +596,115 @@ body {
     margin-left: -2%;
 }
 
+/* ==================================== */
+/* 6. Section Créer Vos Formations */
+/* ==================================== */
+
+#create-section {
+    display: flex;
+    width: 100%;
+    /* min-width: 37.5rem; */
+    flex-direction: row; 
+    background-color: var(--klivio-green); 
+    overflow: hidden;
+}
+
+.create-image {
+    flex: 1;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.create-image img {
+    display: block;
+    width: 90%; 
+    height: auto;
+    object-fit: cover;
+    margin: auto; 
+    margin-right: -2%; 
+}
+
+.create-text {
+    flex: 1;
+    padding: 5rem 8rem 5rem 1.5rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.create-text h3 {
+    color: var(--text-dark);
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 2.5rem;
+    letter-spacing: -0.003375rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3rem;
+}
+
+.create-list {
+    list-style: none;
+    padding: 0;
+}
+
+.create-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+.create-list .icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.create-list .icon-box svg path {
+    stroke: var(--white-color); 
+    fill: none; 
+}
+
+.create-list span {
+    color: var(--text-black);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.create-list li:nth-last-child(2) {
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.create-list li:last-child {
+    margin-top: 2.5rem;
+}
+
+
+/* MEDIA QUERIES pour la nouvelle section */
+
+@media (max-width: 600px) {
+    #create-section {
+        flex-direction: column-reverse; /* Empile l'image en bas sur mobile */
+    }
+
+    .create-text {
+        padding: 2.5rem 1.5rem; /* Padding réduit sur mobile */
+    }
+
+    .create-image img {
+        width: 100%;
+        margin: 0;
+    }
+}
+
 
 /* Média Query pour l'adaptation du header sur les petits écrans */
 @media (max-width: 600px) {
