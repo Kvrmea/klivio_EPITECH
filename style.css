@@ -176,7 +176,7 @@ body {
 }
 
 #hero-section {
-    background: url('/assets/bg-header.png') no-repeat center center/cover;
+    background: url('assets/bg-header.png') no-repeat center center/cover;
     position: relative;
     height: 25.1875rem;
     width: 100%;
