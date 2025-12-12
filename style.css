@@ -13,6 +13,7 @@
     --text-black: #000;
     --white-color: #ffffff;
     --font-family: 'Montserrat', sans-serif;
+    --klivio-burger-white: #FEF7FF;
 }
 
 /* ==================================== */
@@ -175,6 +176,14 @@ body {
     display: none;
 }
 
+.burger {
+    display: none; 
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--klivio-burger-white); 
+}
+
 #hero-section {
     background: url('assets/bg-header.png') no-repeat center center/cover;
     position: relative;
@@ -280,11 +289,19 @@ body {
 
 .formation-card .instructor {
     color: var(--text-dark);
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 500;
     line-height: 1.5625rem;
-    margin-bottom: 0.8rem; 
+    margin-bottom: 0.5rem; 
+    /* text-wrap: nowrap; */
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
 }
+
+/* .instructor sonia {
+    width: 90%;
+    letter-spacing: -0.05rem;
+} */
 
 .cards-container {
     display: grid;
@@ -312,11 +329,11 @@ body {
 
     background-color: var(--header-bg);
     padding: 0.6rem 1rem;
-    border-radius: 15px;
+    border-radius: 5.8125rem;
 
     color: var(--white-color);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     letter-spacing: -0.01875rem;
     margin: 0;
@@ -426,8 +443,8 @@ body {
 }
 
 .reduct {
-    font-size: 0.7rem;
-    font-weight: 100;
+    font-size: 0.625rem;
+    font-weight: 400;
 }
 .btn-see-more-r {
     display: flex; 
@@ -474,6 +491,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 5rem;
+    margin-right: 15rem;
     /* align-items: flex-start; */
     /* flex-wrap: nowrap; */
     /* display: grid;
@@ -498,8 +516,8 @@ body {
 }
 
 .testimonial-card .avatar {
-    width: 5.625rem;
-    height: 5.625rem;
+    width: 7rem;
+    height: 6rem;
     border-radius: 50%;
     object-fit: cover;
     display: block;
@@ -522,7 +540,8 @@ body {
     color: var(--text-dark); 
     font-size: 1rem; 
     font-weight: 400; 
-    line-height: 1.6;
+    line-height: 1.8;
+    letter-spacing: 0.015rem;
     margin: 0;
     margin-top: auto; /* Pousse le texte vers le bas si la carte est plus grande */
 }
@@ -733,8 +752,8 @@ body {
 }
 
 .about-visual img {
-    width: 60%;
-    max-width: 18.75rem;
+    width: 70%;
+    max-width: 26.875rem;
     height: auto;
     object-fit: contain;
 }
@@ -745,6 +764,15 @@ body {
     display: flex;
     justify-content: center;
     padding: 6rem 0;
+}
+
+.green-line {
+    background-color: var(--klivio-green);
+    width: 350px;
+    height: 1px;
+    margin-bottom: 5%;
+    margin-top: -20px;
+    border: none;
 }
 
 .contact-container {
@@ -759,7 +787,7 @@ body {
     font-size: 2rem;
     font-weight: 800;
     color: var(--text-dark);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 #contact-section form {
@@ -817,7 +845,7 @@ body {
 }
 
 .contact-container {
-    max-width: 50rem;
+    max-width: 70rem;
     margin: 0 auto;
 }
 
@@ -827,17 +855,19 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 3rem;
+    margin-top: -3rem;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .contact-form .input-row {
     display: flex;
-    gap: 1.5rem;
+    gap: 9rem;
 }
 
 .contact-form input[type="text"],
@@ -862,7 +892,8 @@ body {
 
 .btn-submit {
     display: block;
-    width: 15rem;
+    width: 21.97238rem;
+    height: 2.83131rem;
     padding: 1rem 2rem;
     margin: 0 auto;
     background-color: var(--klivio-green); 
@@ -870,126 +901,172 @@ body {
     font-size: 1rem;
     font-weight: 500;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 5rem;
 }
 
 .btn-submit:hover {
     background-color: #3aa26d;
 }
 
-
-/* MEDIA QUERIES pour la nouvelle section */
-
-@media (max-width: 600px) {
-    #create-section {
-        flex-direction: column-reverse; /* Empile l'image en bas sur mobile */
-    }
-
-    .create-text {
-        padding: 2.5rem 1.5rem; /* Padding réduit sur mobile */
-    }
-
-    .create-image img {
-        width: 100%;
-        margin: 0;
-    }
+footer {
+    background-color: var(--header-bg);
+    color: var(--white-color);
+    padding: 4rem 0 2rem 0;
 }
 
-
-/* Média Query pour l'adaptation du header sur les petits écrans */
-@media (max-width: 600px) {
-    #main-header .container {
-        /* On passe en grille sur 2 colonnes (Logo à gauche, Actions à droite) */
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 10px;
-        align-items: center;
-    }
-    
-    /* Le lien "Les formations" (nav-center) disparaît (souvent dans un menu burger) */
-    .nav-center {
-        display: none;
-    }
-
-    /* L'icône de connexion (nav-actions) passe à droite */
-    .nav-actions {
-        justify-content: flex-end;
-    }
-
-    /* La barre de recherche (search-form) prend toute la largeur sous le header */
-    .search-form {
-        grid-column: 1 / -1; /* Prend la largeur de la première colonne à la dernière */
-        width: 100%;
-        margin-top: 5px;
-    }
-    
-    /* Réduction de la taille de l'icône de recherche pour un meilleur ajustement */
-    .search-icon {
-        font-size: 1rem;
-    }
+.footer-container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15rem;
+    align-items: start;
 }
 
-@media (max-width: 600px) {
-
-    /* Règle générale pour aérer les contenus */
-    .container {
-        padding: 0 15px; /* Réduit le padding latéral du conteneur sur mobile */
-    }
-
-    /* Réduction générale des marges et padding de sections */
-    .formations-list {
-        padding: 40px 15px;
-    }
-    
-    /* Titres de section (H2 ou H3) */
-    .formations-list h2, .formations-list h3 {
-        font-size: 1.5rem; /* Réduction du gros titre */
-        line-height: 2rem;
-        margin-bottom: 20px;
-    }
-
-    /* Le titre principal H1 */
-    .hero-content h1 {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-
-    /* Le paragraphe sous le H1 */
-    .hero-content p {
-        font-size: 0.9rem;
-    }
+/* Logo */
+.footer-logo img {
+    width: 15.1875rem;
+    height: 5.4375rem;
+    margin-top: 2rem;
 }
 
-@media (max-width: 600px) {
-    
-    /* La Grille magique passe à 1 seule colonne */
-    .cards-container {
-        grid-template-columns: 1fr; /* Une seule carte par ligne */
-        gap: 20px;
-    }
-    
-    /* On ajuste la hauteur de l'image de la carte */
-    .formation-card .course-image {
-        height: 10rem; /* 160px */
-    }
-    
-    /* Ajustement de la taille du titre de la carte */
-    .formation-card h3 { 
-        font-size: 1.25rem; /* 20px */
-        line-height: 1.8rem;
-    }
-    
-    /* Ajustement du prix pour qu'il ne soit pas trop gros */
-    .formation-card .price {
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
-    }
+/* Section principale avec les 2 colonnes */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
 
-    /* Le bouton Voir plus prend une largeur raisonnable */
-    .btn-see-more {
-        width: 80%; 
-        font-size: 0.9rem;
-    }
+/* Style des colonnes */
+.footer-column h4 {
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-column ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    opacity: 0.7;
+}
+
+/* Coordonnées avec icônes */
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+}
+
+.footer-contact li i {
+    color: var(--white-color);
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.footer-contact li span {
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Ligne de séparation */
+.footer-divider {
+    max-width: 82rem;
+    margin: 3rem auto;
+    padding: 0 4rem;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: var(--klivio-green);
+}
+
+/* Section du bas */
+.footer-bottom {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: var(--white-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Réseaux sociaux */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.footer-social span {
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin-right: 0.5rem;
+}
+
+.footer-social a {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 0.7;
+}
+
+.footer-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    margin-top: -10rem;
+}
+
+/* Style de base des boutons (Connexion et Inscription) */
+.footer-actions a {
+    display: inline-flex;
+    padding: 0.6875rem 1.5625rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.0140625rem;
 }
