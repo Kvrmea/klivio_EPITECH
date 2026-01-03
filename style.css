@@ -1078,6 +1078,7 @@ footer {
     }
 
     #main-header .container {
+        max-width: 393px;
         justify-content: space-between;
         padding: 0 1rem;
     }
@@ -1104,15 +1105,15 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .hero-content h2 {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
     .hero-content button {
-        width: 100%;
+        width: 30%;
         height: 3rem;
     }
 
@@ -1132,19 +1133,30 @@ footer {
     }
 
     .testimonial-card {
-        padding: 1.5rem;
+        padding: 2rem;
+    }
+    /* img.avatar {
+        margin-left: 100%;
+    }
+    h4.testimonial-author {
+        margin-left: 100%;
+    } */
+    div.author-block {
+        margin-left: 30%;
     }
 
-    #advantages-section,
+    /* #advantages-section,
     #create-section,
     #about-section {
         flex-direction: column;
+        display: flex;
     }
 
     .advantages-text,
     .create-text,
     .about-text {
         padding: 2rem 1rem;
+        order: 1;
     }
 
     .advantages-image img,
@@ -1152,7 +1164,35 @@ footer {
     .about-visual img {
         width: 100%;
         margin: 0;
-    }
+        order: 2;
+    } */
+
+    /* Ta section responsive existante */
+#advantages-section,
+#create-section,
+#about-section {
+    display: flex;          /* Assure-toi que display flex est là */
+    flex-direction: column; /* On empile les éléments */
+}
+
+/* On force l'ordre pour mettre le texte en premier (en haut) */
+.create-text {
+    order: 1;
+    padding: 2rem 1rem;
+}
+
+/* On force l'image en deuxième position (en bas) */
+.create-image {
+    order: 2;
+}
+div.advantages-image {
+    width: 100%;
+}
+
+.create-image img {
+    width: 100%;
+    margin: 0;
+}
 
         .contact-form .input-row {
         flex-direction: column;
